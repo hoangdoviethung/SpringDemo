@@ -1,0 +1,22 @@
+server:
+  port: 8080
+  application:
+    name: spring-demo-name
+  datasource:
+    url: jdbc:postgresql://192.168.0.142:5432/seateller
+    username: postgres
+    password: postgres
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: none
+# Sentry config
+logging:
+  file:
+    path: /opt/log/SpringDemo/
+    max-size: 20MB
+cache:
+  timeout: 2 # So ngay
+debug: true
